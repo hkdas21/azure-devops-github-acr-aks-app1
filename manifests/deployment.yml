@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hkdasazuredevopsgithubacraksapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hkdasazuredevopsgithubacraksapp
+  template:
+    metadata:
+      labels:
+        app: hkdasazuredevopsgithubacraksapp 
+    spec:
+      containers:
+        - name: hkdasazuredevopsgithubacraksapp 
+          image: aksadoacr01.azurecr.io/hkdasazuredevopsgithubacraksapp
+          ports:
+          - containerPort: 80
